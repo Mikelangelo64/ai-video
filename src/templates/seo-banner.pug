@@ -1,0 +1,18 @@
+.section.seo-banner
+  ._container
+    .seo-banner__wrapper
+      .seo-banner-bg
+        .seo-banner-bg__img
+          img(src=require('@/assets/img/seo-banner.jpg'), alt='seo-banner')
+
+      .seo-banner__content
+        p.seo-banner__title!= 'Готовы провести <span>бесплатную консультацию</span> прямо на вашем объекте'
+
+        .seo-banner__actions
+          button.button-light.seo-banner__button.popup-open(
+            data-popup='_popup-form'
+          )
+            span Нужна консультация
+            <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M4.11299 11.6247L4.93795 12.4497L9.8877 7.49996L4.93795 2.55021L4.11299 3.37517L8.23778 7.49996L4.11299 11.6247Z" fill="currentColor"/>
+            </svg>

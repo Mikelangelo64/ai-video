@@ -1,0 +1,73 @@
+-
+  const menuPopupList = [
+    {
+      name: 'Главная',
+      href: '#',
+      goto: 'false',
+      submenu: [],
+    },
+    {
+      name: 'Системы видеонаблюдения',
+      href: '#',
+      goto: 'false',
+      submenu: [
+        {
+          name: 'Для предприятий',
+          href: '#',
+          goto: 'false',
+        },
+        {
+          name: 'Для игорного бизнеса',
+          href: '#',
+          goto: 'false',
+        },
+        {
+          name: 'Для жилых помещений',
+          href: '#',
+          goto: 'false',
+        },
+      ],
+    },
+    {
+      name: 'Контакты',
+      href: '#',
+      goto: '.footer',
+      submenu: [],
+    },
+  ];
+
+.modal-menu__header
+  button.popup__close
+    img(src=require('@/assets/img/popup-close.svg'), alt='close')
+
+.modal-menu__main
+  nav.menu
+    ul.menu-list.accordion(data-is-label-click='true')
+      each item in menuList
+        li.menu-list__item(
+          class=`${item.submenu.length !== 0 ? 'accordion__item' : ''}`
+        )
+          .menu-list__item__header
+            a.menu__link(
+              class=`${item.goto !== 'false' ? 'anchor' : ''}`,
+              href=`${item.href}`,
+              data-goto=`${item.goto}`
+            ) #{ item.name }
+
+            if item.submenu.length !== 0
+              button.accordion__label
+
+          if item.submenu.length !== 0
+            .accordion__details
+              ul.menu-submenu-list.accordion__description
+                each subItem in item.submenu
+                  li
+                    a.menu-submenu__link(
+                      class=`${subItem.goto !== 'false' ? 'anchor' : ''}`,
+                      href=`${subItem.href}`,
+                      data-goto=`${subItem.goto}`
+                    ) #{ subItem.name }
+
+.modal-menu__footer
+  button.button-light.popup-open.modal-menu__button(data-popup='_popup-form')
+    span Обратный звонок

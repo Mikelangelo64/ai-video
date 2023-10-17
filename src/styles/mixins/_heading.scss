@@ -1,0 +1,83 @@
+@mixin text-heading-styles {
+  margin: 0;
+  word-break: break-word;
+  font-family: $font-family-heading;
+  font-weight: 600;
+  line-height: 116%;
+  //color: var(--color-black);
+}
+
+@mixin text-heading-1 {
+  @include text-heading-styles;
+  line-height: 118%;
+  font-weight: 500;
+
+  @include viewport-desktop {
+    font-size: px-to-rem(58);
+  }
+
+  @include viewport-tablet {
+    font-size: px-to-rem(52);
+  }
+
+  @include viewport-phone {
+    font-size: px-to-rem(30);
+  }
+}
+
+@mixin text-heading-2 {
+  @include text-heading-styles;
+  line-height: 116%;
+
+  @include viewport-desktop {
+    font-size: px-to-rem(36);
+  }
+
+  @include viewport-tablet {
+    font-size: px-to-rem(32);
+  }
+  
+  @include viewport-phone {
+    font-size: px-to-rem(22);
+  }
+}
+
+@mixin text-heading-3 {
+  @include text-heading-styles;
+
+  @include viewport-desktop {
+    font-size: px-to-rem(24);
+  }
+
+  @include viewport-tablet {
+    font-size: px-to-rem(20);
+  }
+  
+  @include viewport-phone {
+    font-size: px-to-rem(18);
+  }
+}
+
+@mixin text-heading-4 {
+  @include text-heading-styles;
+
+  @include viewport-desktop {
+    font-size: px-to-rem(20);
+  }
+
+  @include viewport-tablet {
+    font-size: px-to-rem(20);
+  }
+  
+  @include viewport-phone {
+    font-size: px-to-rem(16);
+  }
+}
+
+@mixin text-heading-5 {
+  @include text-heading-4;
+}
+
+@mixin text-heading-6 {
+  @include text-heading-5;
+}

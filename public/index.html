@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Video</title>
+    <link rel="stylesheet" href="styles.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="_container header__container">
+        <div class="header__wrapper"><a class="logo-link header__logo" href="#"> <img src="assets/img/logo.svg"
+              alt="logo" draggable="false"></a>
+          <nav class="menu header__menu">
+            <ul class="menu-list">
+              <li class="menu-list__item" data-submenu="false"><a class="menu__link" href="#"
+                  data-goto="false">Главная</a></li>
+              <li class="menu-list__item additional" data-submenu="true"><a class="menu__link" href="#"
+                  data-goto="false">Системы видеонаблюдения</a><button class="menu-submenu-open"></button>
+                <div class="menu-submenu">
+                  <p class="menu-submenu__title">Системы видеонаблюдения</p>
+                  <ul class="menu-submenu-list">
+                    <li><a class="menu-submenu__link" href="#" data-goto="false">Для предприятий</a></li>
+                    <li><a class="menu-submenu__link" href="#" data-goto="false">Для игорного бизнеса</a></li>
+                    <li><a class="menu-submenu__link" href="#" data-goto="false">Для жилых помещений</a></li>
+                  </ul>
+                </div>
+              </li>
+              <li class="menu-list__item" data-submenu="false"><a class="menu__link anchor" href="#"
+                  data-goto=".footer">Контакты</a></li>
+            </ul>
+          </nav>
+          <div class="header__buttons"><button class="button-light popup-open header__button"
+              data-popup="_popup-form"><span>Обратный звонок</span></button><button class="menu-burger popup-open"
+              data-popup="_popup-menu"></button></div>
+        </div>
+      </div>
+      <div class="popup popup-menu menu__popup " data-popupname="_popup-menu" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close hidden"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="modal-menu__header"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                    alt="close"></button></div>
+              <div class="modal-menu__main">
+                <nav class="menu">
+                  <ul class="menu-list accordion" data-is-label-click="true">
+                    <li class="menu-list__item">
+                      <div class="menu-list__item__header"><a class="menu__link" href="#" data-goto="false">Главная</a>
+                      </div>
+                    </li>
+                    <li class="menu-list__item accordion__item">
+                      <div class="menu-list__item__header"><a class="menu__link" href="#" data-goto="false">Системы
+                          видеонаблюдения</a><button class="accordion__label"></button></div>
+                      <div class="accordion__details">
+                        <ul class="menu-submenu-list accordion__description">
+                          <li><a class="menu-submenu__link" href="#" data-goto="false">Для предприятий</a></li>
+                          <li><a class="menu-submenu__link" href="#" data-goto="false">Для игорного бизнеса</a></li>
+                          <li><a class="menu-submenu__link" href="#" data-goto="false">Для жилых помещений</a></li>
+                        </ul>
+                      </div>
+                    </li>
+                    <li class="menu-list__item">
+                      <div class="menu-list__item__header"><a class="menu__link anchor" href="#"
+                          data-goto=".footer">Контакты</a></div>
+                    </li>
+                  </ul>
+                </nav>
+              </div>
+              <div class="modal-menu__footer"><button class="button-light popup-open modal-menu__button"
+                  data-popup="_popup-form"><span>Обратный звонок</span></button></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-common about__popup " data-popupname="_popup-about" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <p>default popup</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-feedback thanks__popup " data-popupname="_popup-thanks" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-feedback">
+                <div class="popup-feedback__label"><img src="assets/img/success.svg" alt="success"></div>
+                <p class="popup-feedback__title">Thank you!</p>
+                <p class="popup-feedback__subtitle">We will call you back in a moment :)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-feedback error__popup " data-popupname="_popup-error" aria-modal="true" role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img src="assets/img/popup-close.svg"
+                alt="close"></button>
+            <div class="popup__content">
+              <div class="popup-feedback">
+                <div class="popup-feedback__label"><img src="assets/img/error.svg" alt="error"></div>
+                <p class="popup-feedback__title">Oops</p>
+                <p class="popup-feedback__subtitle">Something wrong. Try later.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup popup-form form__popup fullscreen-phone" data-popupname="_popup-form" aria-modal="true"
+        role="dialog">
+        <div class="popup__overlay"></div>
+        <div class="popup__additional"></div>
+        <div class="popup__scroll">
+          <div class="popup__wrapper"><button class="popup__close"><img class="desktop" src="assets/img/popup-close.svg"
+                alt="close"><img class="mobile" src="assets/img/popup-close-black.svg" alt="close"></button>
+            <div class="popup__content">
+              <div class="action">
+                <p class="action__title">Отримати консультацію</p>
+                <div class="action__main">
+                  <form class="form action__form" id="form-popup" action="post">
+                    <div><label for="popup-name"> <strong>Ім’я</strong><input id="popup-name" type="text"
+                          name="name"><span class="wpcf7-not-valid-tip">Невірний формат</span></label><label
+                        for="popup-lastname"> <strong>Прізвище</strong><input id="popup-lastname" type="text"
+                          name="lastname"><span class="wpcf7-not-valid-tip">Невірний формат</span></label></div>
+                    <div><label for="popup-email"> <strong>Email</strong><input id="popup-email" type="email"
+                          name="email"><span class="wpcf7-not-valid-tip">Невірний формат</span></label><label
+                        for="popup-telephone"> <strong>Телефон</strong><input id="popup-telephone" type="tel"
+                          name="telephone"><span class="wpcf7-not-valid-tip">Невірний формат</span></label></div>
+                    <div><label for="popup-request"> <strong>Чим ми можемо допомогти</strong><textarea
+                          id="popup-request" name="request"></textarea><span class="wpcf7-not-valid-tip">Невірний
+                          формат</span></label></div>
+                    <p><button type="submit">Відправити</button><span>Натискаючи на кнопку "Відправити" ви погоджуєтесь
+                        з<a href="./document.html" target="_blank" rel="noreferrer">умовами
+                          конфіденційності</a><span>компанії Persona Patman</span></span></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <section class="banner main-page appear special">
+      <div class="appear__wrapper">
+        <div class="appear-hidden">
+          <div class="_container banner__container">
+            <div class="banner-bg">
+              <div class="banner-bg__img"><img src="assets/img/banner-bg.jpg" alt="banner"></div>
+            </div>
+            <div class="banner__wrapper">
+              <div class="banner__content">
+                <h1 class="banner__title"><span>Интеллектуальные</span><span class="outlined"><img
+                      src="assets/img/banner-main-label.svg"
+                      alt="label"><span>системы</span></span><span>видеонаблюдения</span></h1>
+                <p class="banner__subtitle">$20 OFF FOR NEW CUSTOMERS</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="appear-shown" data-animate="translateShown">
+          <div class="banner-media">
+            <div class="banner-media__container"><img src="assets/img/banner-media.jpg" alt="banner"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="marquee-container">
+      <div class="marquee"><span class="marquee__item">распознавание номерных знаков</span><span
+          class="marquee__item">распознавание лиц людей</span><span class="marquee__item">идентификация
+          персоны</span><span class="marquee__item">функция сигнализации</span><span class="marquee__item">идентификация
+          эмоций</span></div>
+    </div>
+    <section class="types dark">
+      <div class="_container">
+        <div class="types__wrapper">
+          <div class="types-list">
+            <div class="types-list__item"><a class="types-list__img" href="#" target="_blank" rel="noreferrer"> <span
+                  class="types-list__img__container"><img src="assets/img/types/type-1.jpg"
+                    alt="Для предприятий"></span></a>
+              <div class="types-list__content">
+                <h3 class="types-list__title">Для предприятий</h3>
+                <p class="types-list__description">Передовые технологии в области искусственного интеллекта для
+                  распознавания объектов на видео в режиме реального времени</p><a class="types-list__link" href="#"
+                  target="_blank" rel="noreferrer"><img src="assets/img/arrow-right.svg" alt="more"></a>
+              </div>
+            </div>
+            <div class="types-list__item"><a class="types-list__img" href="#" target="_blank" rel="noreferrer"> <span
+                  class="types-list__img__container"><img src="assets/img/types/type-2.jpg"
+                    alt="Для игорного бизнеса"></span></a>
+              <div class="types-list__content">
+                <h3 class="types-list__title">Для игорного бизнеса</h3>
+                <p class="types-list__description">Передовые технологии в области искусственного интеллекта для
+                  распознавания объектов на видео в режиме реального времени</p><a class="types-list__link" href="#"
+                  target="_blank" rel="noreferrer"><img src="assets/img/arrow-right.svg" alt="more"></a>
+              </div>
+            </div>
+            <div class="types-list__item"><a class="types-list__img" href="#" target="_blank" rel="noreferrer"> <span
+                  class="types-list__img__container"><img src="assets/img/types/type-3.jpg"
+                    alt="Для жилых помещений"></span></a>
+              <div class="types-list__content">
+                <h3 class="types-list__title">Для жилых помещений</h3>
+                <p class="types-list__description">Передовые технологии в области искусственного интеллекта для
+                  распознавания объектов на видео в режиме реального времени</p><a class="types-list__link" href="#"
+                  target="_blank" rel="noreferrer"><img src="assets/img/arrow-right.svg" alt="more"></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="scheme near-seo near-seo__above">
+      <div class="_container">
+        <div class="scheme__wrapper">
+          <div class="scheme__header">
+            <h2 class="scheme__title">Что такое интеллектуальное <span>видеонаблюдение</span></h2>
+            <p class="scheme__subtitle">упрощенная схема</p>
+          </div>
+          <div class="scheme__main">
+            <div class="scheme__item left">
+              <h3 class="scheme-list__title">состоит из:</h3>
+              <ul class="scheme-list">
+                <li class="scheme-list__item">Умные камеры</li>
+                <li class="scheme-list__item">Система искусственного интеллекта</li>
+                <li class="scheme-list__item">Программные компоненты</li>
+                <li class="scheme-list__item">Системы передачи сигнала</li>
+                <li class="scheme-list__item">Устройство хранения информации</li>
+              </ul>
+            </div>
+            <div class="scheme__media"><img src="assets/img/scheme.jpg" alt="scheme" loading="lazy"></div>
+            <div class="scheme__item right">
+              <h3 class="scheme-list__title">дает воможность:</h3>
+              <ul class="scheme-list">
+                <li class="scheme-list__item">Распознавания лиц</li>
+                <li class="scheme-list__item">Идентификации личности</li>
+                <li class="scheme-list__item">Распознавание эмоций</li>
+                <li class="scheme-list__item">Распознавания номерных знаков</li>
+                <li class="scheme-list__item">Распознавание звуков</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="section seo-banner">
+      <div class="_container">
+        <div class="seo-banner__wrapper">
+          <div class="seo-banner-bg">
+            <div class="seo-banner-bg__img"><img src="assets/img/seo-banner.jpg" alt="seo-banner"></div>
+          </div>
+          <div class="seo-banner__content">
+            <p class="seo-banner__title">Готовы провести <span>бесплатную консультацию</span> прямо на вашем объекте</p>
+            <div class="seo-banner__actions"><button class="button-light seo-banner__button popup-open"
+                data-popup="_popup-form"><span>Нужна консультация</span><svg width="14" height="15" viewBox="0 0 14 15"
+                  fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M4.11299 11.6247L4.93795 12.4497L9.8877 7.49996L4.93795 2.55021L4.11299 3.37517L8.23778 7.49996L4.11299 11.6247Z"
+                    fill="currentColor" />
+                </svg></button></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer near-seo__below">
+      <div class="_container">
+        <div class="footer__wrapper">
+          <div class="footer__item"><a class="logo-link footer__logo" href="#"> <img src="assets/img/logo-footer.svg"
+                alt="logo" draggable="false"></a>
+            <p class="footer__copyright">© 2023 AI VIDEO</p>
+          </div>
+          <div class="footer__item">
+            <p class="footer__title">Контакты</p>
+            <ul class="footer-contacts">
+              <li><a class="footer-contacts__item" href="https://maps.app.goo.gl/tHsM16eqeUWAMMi16"
+                  target="_blank"><span class="footer-contacts__label"><img src="assets/img/contacts/contacts-1.svg"
+                      alt="contact-1"></span><span class="footer-contacts__text">Киев, ул. Миропольская, 22</span></a>
+              </li>
+              <li><a class="footer-contacts__item" href="tel:0800800500" target="_self"><span
+                    class="footer-contacts__label"><img src="assets/img/contacts/contacts-2.svg"
+                      alt="contact-2"></span><span class="footer-contacts__text">0 800 800 500</span></a></li>
+              <li><a class="footer-contacts__item" href="mailto:info@aivideo.com" target="_self"><span
+                    class="footer-contacts__label"><img src="assets/img/contacts/contacts-3.svg"
+                      alt="contact-3"></span><span class="footer-contacts__text">info@aivideo.com</span></a></li>
+            </ul>
+          </div>
+          <div class="footer__item">
+            <p class="footer__title">Мы в соцсетях</p>
+            <ul class="footer-socials">
+              <li><a class="footer-socials__item" href="https://www.youtube.com/" target="_blank" rel="noreferrer"><span
+                    class="footer-socials__img"><img src="assets/img/socials/youtube.svg" alt="youtube"></span></a></li>
+              <li><a class="footer-socials__item" href="https://www.instagram.com/" target="_blank"
+                  rel="noreferrer"><span class="footer-socials__img"><img src="assets/img/socials/instagram.svg"
+                      alt="instagram"></span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="runtime.bundle.js"> </script>
+    <script src="vendor.js"> </script>
+    <script src="607.bundle.js"> </script>
+    <script src="index.1.bundle.js"> </script>
+  </body>
+</html>

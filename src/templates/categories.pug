@@ -1,0 +1,39 @@
+-
+  const categoriesList = [
+    {
+      href: '#',
+      image: '@/assets/img/categories/category-1.jpg',
+      title: 'Бизнес-центры',
+    },
+    {
+      href: '#',
+      image: '@/assets/img/categories/category-2.jpg',
+      title: 'Логистические комплексы',
+    },
+    {
+      href: '#',
+      image: '@/assets/img/categories/category-3.jpg',
+      title: 'Автопредприятия',
+    },
+    {
+      href: '#',
+      image: '@/assets/img/categories/category-4.jpg',
+      title: 'Торговые залы',
+    },
+  ];
+
+section.categories.dark
+  ._container
+    .categories__wrapper
+      .categories-list
+        each item in categoriesList
+          a.categories-list__item(
+            href=`${item.href}`,
+            target='_blank',
+            rel='noreferrer'
+          ) 
+            h3.categories-list__title= item.title
+
+            span.categories-list__img
+              span.categories-list__img__container
+                img(src=require(`${item.image}`), alt=`${item.title}`)

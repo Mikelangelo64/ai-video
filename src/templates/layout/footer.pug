@@ -1,0 +1,86 @@
+-
+  const footerContacts = [
+    {
+        isTargetBlank: 'true',
+        image: '@/assets/img/contacts/contacts-1.svg',
+        href: 'https://maps.app.goo.gl/tHsM16eqeUWAMMi16',
+        title: 'Киев, ул. Миропольская, 22'
+      },
+      {
+        isTargetBlank: 'false',
+        image: '@/assets/img/contacts/contacts-2.svg',
+        href: 'tel:0800800500',
+        title: '0 800 800 500'
+      },
+      {
+        isTargetBlank: 'false',
+        image: '@/assets/img/contacts/contacts-3.svg',
+        href: 'mailto:info@aivideo.com',
+        title: 'info@aivideo.com'
+      },
+  ];
+
+  const footerSocials = [
+    {
+      image: '@/assets/img/socials/youtube.svg',
+      href: 'https://www.youtube.com/',
+      alt: 'youtube'
+    },
+    {
+      image: '@/assets/img/socials/instagram.svg',
+      href: 'https://www.instagram.com/',
+      alt: 'instagram'
+    },
+  ];
+
+footer.footer.near-seo__below
+  ._container
+    .footer__wrapper
+      .footer__item
+        a.logo-link.footer__logo(href='#') 
+          img(
+            src=require('@/assets/img/logo-footer.svg'),
+            alt='logo',
+            draggable='false'
+          )
+
+        p.footer__copyright © 2023 AI VIDEO
+
+        //- a.develop(
+        //-   href='https://impulse-design.com.ua/',
+        //-   target='_blank',
+        //-   rel='noreferrer'
+        //- )
+        //-   span.develop__text Developed By
+
+        //-   span.develop__img
+        //-     img(src=require('@/assets/img/impulse.svg'), alt='impulse')
+
+      .footer__item
+        p.footer__title Контакты
+
+        ul.footer-contacts
+          each item, index in footerContacts
+            li
+              a.footer-contacts__item(
+                href=`${item.href}`,
+                target=`${item.isTargetBlank === 'true' ? '_blank' : '_self'}`
+              )
+                span.footer-contacts__label
+                  img(src=require(`${item.image}`), alt=`contact-${index + 1}`)
+
+                span.footer-contacts__text= item.title
+
+      .footer__item
+        p.footer__title Мы в соцсетях
+
+        ul.footer-socials
+          each item, index in footerSocials
+            li
+              a.footer-socials__item(
+                href=`${item.href}`,
+                target='_blank',
+                rel='noreferrer'
+              )
+                span.footer-socials__img
+                  img(src=require(`${item.image}`), alt=`${item.alt}`)

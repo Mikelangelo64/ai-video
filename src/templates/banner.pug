@@ -1,0 +1,26 @@
+section.banner.main-page.appear.special
+  .appear__wrapper
+    .appear-hidden
+      ._container.banner__container
+        .banner-bg
+          .banner-bg__img
+            img(src=require('@/assets/img/banner-bg.jpg'), alt='banner')
+
+        .banner__wrapper
+          .banner__content
+            h1.banner__title
+              span Интеллектуальные
+              span.outlined
+                img(
+                  src=require('@/assets/img/banner-main-label.svg'),
+                  alt='label'
+                ) 
+                span системы
+              span видеонаблюдения
+
+            p.banner__subtitle!= '$20 OFF FOR NEW CUSTOMERS'
+
+    .appear-shown(data-animate='translateShown')
+      .banner-media
+        .banner-media__container
+          img(src=require('@/assets/img/banner-media.jpg'), alt='banner')

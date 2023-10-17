@@ -1,0 +1,46 @@
+-
+  const schemeList1 = [
+    'Умные камеры',
+    'Система искусственного интеллекта',
+    'Программные компоненты',
+    'Системы передачи сигнала',
+    'Устройство хранения информации',
+  ];
+
+  const schemeList2 = [
+    'Распознавания лиц',
+    'Идентификации личности',
+    'Распознавание эмоций',
+    'Распознавания номерных знаков',
+    'Распознавание звуков',
+  ];
+
+section.scheme.near-seo.near-seo__above
+  ._container
+    .scheme__wrapper
+      .scheme__header
+        h2.scheme__title!= 'Что такое интеллектуальное <span>видеонаблюдение</span>'
+
+        p.scheme__subtitle упрощенная схема
+
+      .scheme__main
+        .scheme__item.left
+          h3.scheme-list__title состоит из:
+
+          ul.scheme-list
+            each item in schemeList1
+              li.scheme-list__item= item
+
+        .scheme__media
+          img(
+            src=require('@/assets/img/scheme.jpg'),
+            alt='scheme',
+            loading='lazy'
+          )
+
+        .scheme__item.right
+          h3.scheme-list__title дает воможность:
+
+          ul.scheme-list
+            each item in schemeList2
+              li.scheme-list__item= item

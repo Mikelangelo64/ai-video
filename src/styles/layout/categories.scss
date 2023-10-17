@@ -1,0 +1,25 @@
+.categories {
+  
+  //.categories__wrapper 
+  &__wrapper {
+  }
+  
+  //.categories-list 
+  &-list {
+    
+    //.categories-list__item 
+    &__item {
+    }
+    
+    //.categories-list__title 
+    &__title {
+    }
+    
+    //.categories-list__img 
+    &__img {
+      //.categories-list__img__container 
+      &__container {
+      }
+    }
+  }
+}

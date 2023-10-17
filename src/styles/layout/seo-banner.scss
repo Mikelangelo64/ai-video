@@ -1,0 +1,136 @@
+.near-seo {
+  //.near-seo__above 
+  &__above {
+    @include viewport-desktop {
+      padding-bottom: calc(#{px-to-rem(80)} + #{px-to-rem(280)});
+    }
+
+    @include viewport-tablet {
+      padding-bottom: calc(#{px-to-rem(64)} + #{px-to-rem(280)});
+    }
+
+    @include viewport-phone {
+      padding-bottom: calc(#{px-to-rem(50)} + #{px-to-rem(100)});
+    }
+  }
+
+  //.near-seo__below 
+  &__below {
+    @include viewport-desktop {
+      padding-top: calc(#{px-to-rem(80)} + #{px-to-rem(140)});
+    }
+
+    @include viewport-tablet {
+      padding-top: calc(#{px-to-rem(64)} + #{px-to-rem(140)});
+    }
+
+    @include viewport-phone {
+      padding-top: calc(#{px-to-rem(50)} + #{px-to-rem(40)});
+    }
+  }
+}
+
+.seo-banner {
+
+  padding: 0;
+
+  @include viewport-tablet-min {
+    margin-top: px-to-rem(-280);
+    margin-bottom: px-to-rem(-140);
+  }
+  @include viewport-phone {
+    margin-top: px-to-rem(-100);
+    margin-bottom: px-to-rem(-40);
+  }
+
+  //.seo-banner__wrapper 
+  &__wrapper {
+    position: relative;
+    z-index: 0;
+
+    border-radius: px-to-rem(8);
+    overflow: hidden;
+    transform: translateZ(0);
+
+    color: var(--color-white);
+    background-color: var(--color-blue);
+
+    @include viewport-desktop {
+      padding: px-to-rem(90) px-to-rem(20);
+    }
+    @include viewport-tablet {
+      padding: px-to-rem(80) px-to-rem(20);
+    }
+    @include viewport-phone {
+      padding: px-to-rem(46) px-to-rem(20);
+    }
+  }
+
+  //.seo-banner-bg 
+  &-bg {
+    @include absolute-fullsize;
+    z-index: 0;
+
+    &::before {
+      content: '';
+      display: block;
+      @include absolute-fullsize;
+
+      background-image: linear-gradient(90deg, var(--color-types-begin) 0, var(--color-types-end) 100%);
+    }
+
+    //.seo-banner-bg__img 
+    &__img {
+      img {
+        @include absolute-fullsize;
+        object-fit: cover;
+        opacity: 0.1;
+      }
+    }
+  }
+
+  //.seo-banner__content 
+  &__content {
+    position: relative;
+    z-index: 1;
+
+    max-width: px-to-rem(814);
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+    > * + * {
+      @include viewport-tablet-min {
+        margin-top: px-to-rem(42);
+      }
+
+      @include viewport-phone {
+        margin-top: px-to-rem(36);
+      }
+    }
+  }
+
+  //.seo-banner__title 
+  &__title {
+    @include text-heading-2;
+    font-weight: 300;
+    line-height: 130%;
+    
+    span {
+      display: block;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+  }
+
+  //.seo-banner__actions 
+  &__actions {
+    display: flex;
+    justify-content: center;
+  }
+
+  //.seo-banner__button 
+  // &__button {
+  // }
+}

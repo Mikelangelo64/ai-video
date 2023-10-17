@@ -1,0 +1,47 @@
+-
+  const typesList = [
+    {
+      href: '#',
+      image: '@/assets/img/types/type-1.jpg',
+      title: 'Для предприятий',
+      description: 'Передовые технологии в области искусственного интеллекта для распознавания объектов на видео в режиме реального времени',
+    },
+    {
+      href: '#',
+      image: '@/assets/img/types/type-2.jpg',
+      title: 'Для игорного бизнеса',
+      description: 'Передовые технологии в области искусственного интеллекта для распознавания объектов на видео в режиме реального времени',
+    },
+    {
+      href: '#',
+      image: '@/assets/img/types/type-3.jpg',
+      title: 'Для жилых помещений',
+      description: 'Передовые технологии в области искусственного интеллекта для распознавания объектов на видео в режиме реального времени',
+    },
+  ];
+
+section.types.dark
+  ._container
+    .types__wrapper
+      .types-list
+        each item in typesList
+          .types-list__item
+            a.types-list__img(
+              href=`${item.href}`,
+              target='_blank',
+              rel='noreferrer'
+            ) 
+              span.types-list__img__container
+                img(src=require(`${item.image}`), alt=`${item.title}`)
+
+            .types-list__content
+              h3.types-list__title= item.title
+
+              p.types-list__description= item.description
+
+              a.types-list__link(
+                href=`${item.href}`,
+                target='_blank',
+                rel='noreferrer'
+              )
+                img(src=require('@/assets/img/arrow-right.svg'), alt='more')

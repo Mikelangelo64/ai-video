@@ -1,0 +1,84 @@
+-
+  const menuList = [
+    {
+      name: 'Главная',
+      href: '#',
+      goto: 'false',
+      submenu: [],
+    },
+    {
+      name: 'Системы видеонаблюдения',
+      href: '#',
+      goto: 'false',
+      submenu: [
+        {
+          name: 'Для предприятий',
+          href: '#',
+          goto: 'false',
+        },
+        {
+          name: 'Для игорного бизнеса',
+          href: '#',
+          goto: 'false',
+        },
+        {
+          name: 'Для жилых помещений',
+          href: '#',
+          goto: 'false',
+        },
+      ],
+    },
+    {
+      name: 'Контакты',
+      href: '#',
+      goto: '.footer',
+      submenu: [],
+    },
+  ];
+
+
+header.header
+  ._container.header__container
+    .header__wrapper
+      a.logo-link.header__logo(href='#') 
+        img(
+          src=require('@/assets/img/logo.svg'),
+          alt='logo',
+          draggable='false'
+        )
+
+      nav.menu.header__menu
+        ul.menu-list
+          each item in menuList
+            li.menu-list__item(
+              class=`${item.submenu.length !== 0 ? 'additional' : ''}`,
+              data-submenu=`${item.submenu.length !== 0 ? 'true' : 'false'}`
+            )
+              a.menu__link(
+                class=`${item.goto !== 'false' ? 'anchor' : ''}`,
+                href=`${item.href}`,
+                data-goto=`${item.goto}`
+              ) #{ item.name }
+
+              if item.submenu.length !== 0
+                button.menu-submenu-open
+
+                .menu-submenu
+                  p.menu-submenu__title= item.name
+
+                  ul.menu-submenu-list
+                    each subItem in item.submenu
+                      li
+                        a.menu-submenu__link(
+                          class=`${subItem.goto !== 'false' ? 'anchor' : ''}`,
+                          href=`${subItem.href}`,
+                          data-goto=`${subItem.goto}`
+                        ) #{ subItem.name }
+
+      .header__buttons
+        button.button-light.popup-open.header__button(data-popup='_popup-form')
+          span Обратный звонок
+
+        button.menu-burger.popup-open(data-popup='_popup-menu')
+
+  include @/layout/popup.pug
