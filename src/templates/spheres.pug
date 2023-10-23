@@ -1,0 +1,42 @@
+-
+  const spheresList = [
+    {
+      image: '@/assets/img/spheres/spheres-1.svg',
+      description: 'Предотвращение хищений',
+    },
+    {
+      image: '@/assets/img/spheres/spheres-2.svg',
+      description: 'Контроль доступа на территорию',
+    },
+    {
+      image: '@/assets/img/spheres/spheres-3.svg',
+      description: 'Контроль действий персонала',
+    },
+    {
+      image: '@/assets/img/spheres/spheres-4.svg',
+      description: 'Учет въезда/выезда автотранспорта',
+    },
+    {
+      image: '@/assets/img/spheres/spheres-5.svg',
+      description: 'Упрощение анализа поведения клиентов',
+    },
+    {
+      image: '@/assets/img/spheres/spheres-6.svg',
+      description: 'Контроль техники на территории',
+    },
+  ];
+
+section.spheres.grey
+  ._container
+    .spheres__wrapper
+      .spheres__header
+        h2.spheres__title!= `Что обеспечивает <span>интеллектуальное видеонаблюдение</span> в этой сфере`
+        p.spheres__subtitle Если неприятности все таки имели место,<br/> то записи видеонаблюдения - это готовая доказательная база.
+
+      ul.spheres-list.label-list
+        each item in spheresList
+          li.spheres-list__item.label-list__item
+            .spheres-list__label.label-list__label
+              img(src=require(`${item.image}`), alt=`${item.description}`)
+
+            p.spheres-list__description= item.description

@@ -1,0 +1,53 @@
+-
+  const stepsList = [
+    {
+      title: 'Вы оставляете заявку удобным для вас способом',
+      sublist: [
+        'Воспользуйтесь формой прямо тут',
+        'Позвоните нам по телефону',
+        'Напишите нам в мессенджер',
+      ],
+    },
+    {
+      title: 'Мы выезжаем на объект и даем бесплатную консультацию',
+      sublist: [
+        'Выясним особенности объекта ',
+        'Обсудим задачи видеонаблюдения',
+        'Предложим варианты решений',
+      ],
+    },
+    {
+      title: 'Мы выезжаем на объект и даем бесплатную консультацию',
+      sublist: [
+        'Консультационное сопровождение',
+        'Проектирование системы',
+        'Комплексная реализация проекта',
+      ],
+    },
+  ];
+
+section.steps.light
+  ._container
+    .steps__wrapper
+      .steps__header
+        h2.steps__title Сделайте первый шаг к <span>идеальному видеонаблюдению</span>
+        p.steps__subtitle это абсолютно бесплатно
+
+      ul.steps-list
+        each item, index in stepsList
+          li.steps-list__item
+            .steps-list__header
+              h3.steps-list__title= item.title
+
+              .steps-list__count!= `0${index + 1}`
+
+            ul.steps-list-sublist
+              each subitem in item.sublist
+                li.steps-list-sublist__item= subitem
+
+      .steps__footer
+        button.button-dark.steps__button.popup-open(data-popup='_popup-form')
+          span Оставить заявку
+          <svg width="14" height="15" viewBox="0 0 14 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4.11299 11.6247L4.93795 12.4497L9.8877 7.49996L4.93795 2.55021L4.11299 3.37517L8.23778 7.49996L4.11299 11.6247Z" fill="currentColor"/>
+          </svg>

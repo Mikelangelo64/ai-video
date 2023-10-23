@@ -1,17 +1,18 @@
 @import '../base';
 
 .popup {
-  &.popup-menu {
-    --wrapper-width: 100%;
+  @include viewport-tablet-min {
+    --wrapper-width: #{px-to-rem(662)};
+  }
+  
+  &.popup-feedback {
+    @include viewport-tablet-min {
+      --wrapper-width: #{px-to-rem(542)};
+    }
   }
 
-  &.popup-pricing {
-    @include viewport-desktop {
-      --wrapper-width: #{px-to-rem(1082)};
-    }
-    @include viewport-tablet {
-      --wrapper-width: #{px-to-rem(806)};
-    }
+  &.popup-menu {
+    --wrapper-width: 100%;
   }
 
   //.popup__overlay
@@ -41,21 +42,20 @@
   
   //.popup__wrapper 
   &__wrapper {   
+    border-radius: px-to-rem(10);
     background-color: var(--color-grey);
     
     @include viewport-desktop {
-      border-radius: px-to-rem(40);
-      padding: px-to-rem(56) px-to-rem(90);
+      padding: px-to-rem(74) px-to-rem(112);
     }
     
     @include viewport-tablet {
-      border-radius: px-to-rem(40);
       padding: px-to-rem(40) px-to-rem(76);
     }
-
-    @include viewport-phone {
-      border-radius: px-to-rem(24);
-    }
+    
+    // @include viewport-phone {
+    //   padding: px-to-rem(40) px-to-rem(76);
+    // }
     
     @at-root .popup.popup-video & {
       margin: 0 auto;
@@ -65,8 +65,7 @@
 
     @at-root .popup.popup-feedback & {  
       @include viewport-tablet-min {
-        max-width: px-to-rem(574);
-        padding: px-to-rem(34) px-to-rem(32) px-to-rem(62);
+        padding: px-to-rem(82) px-to-rem(60) px-to-rem(68);
       }
     }
 
@@ -128,11 +127,6 @@
     }
 
     @at-root .popup.popup-video & {
-      max-width: unset;
-      margin: 0 auto;
-    }
-
-    @at-root .popup.popup-pricing & {
       max-width: unset;
       margin: 0 auto;
     }

@@ -110,11 +110,21 @@ section,
     background-color: var(--color-black);
   }
 
+  &.grey {
+    color: var(--color-black);
+    background-color: var(--color-blue-100);
+  }
+
+  &.light {
+    color: var(--color-black);
+    background-color: var(--color-white);
+  }
+
   @include viewport-desktop {
-    padding: px-to-rem(50) 0;
+    padding: px-to-rem(100) 0;
   }
   @include viewport-tablet {
-    padding: px-to-rem(50) 0;
+    padding: px-to-rem(60) 0;
   }
   @include viewport-phone {
     padding: px-to-rem(40) 0;
@@ -128,7 +138,7 @@ section,
   text-align: center;
 
   > * + * {
-    margin-top: px-to-rem(20);
+    margin-top: px-to-rem(24);
   }
 
   //.popup-feedback__label 
@@ -151,15 +161,25 @@ section,
 
   //.popup-feedback__title 
   &__title {
-    @include text-heading-2;
+    @include text-heading-3;
+
+    @include viewport-desktop {
+      font-size: px-to-rem(26);
+    }
+
     color: var(--color-blue);
   }
 
   //.popup-feedback__subtitle 
   &__subtitle {
-    font-weight: 500;
-    line-height: 122%;
-    font-size: px-to-rem(20);
+    font-weight: 250;
+    line-height: 174%;
+    font-size: px-to-rem(14);
+  }
+
+  //.popup-feedback__button 
+  &__button {
+    margin-top: px-to-rem(42);
   }
 }
 
@@ -179,4 +199,10 @@ section,
 @import './layout/scheme';
 @import './layout/seo-banner';
 @import './layout/categories';
+@import './layout/label-list';
+@import './layout/spheres';
+@import './layout/services';
+@import './layout/benefits';
+@import './layout/steps';
+@import './layout/popup-action';
 @import './layout/typography';

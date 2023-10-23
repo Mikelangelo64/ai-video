@@ -96,9 +96,9 @@
                 alt="close"></button>
             <div class="popup__content">
               <div class="popup-feedback">
-                <div class="popup-feedback__label"><img src="assets/img/success.svg" alt="success"></div>
-                <p class="popup-feedback__title">Thank you!</p>
-                <p class="popup-feedback__subtitle">We will call you back in a moment :)</p>
+                <p class="popup-feedback__title">Спасибо!</p>
+                <p class="popup-feedback__subtitle">Ваша заявка принята. <br />Ми свяжемся с вами в ближайшее время.</p>
+                <button class="popup-feedback__button popup__button button-dark"><span>На Главную</span></button>
               </div>
             </div>
           </div>
@@ -112,7 +112,6 @@
                 alt="close"></button>
             <div class="popup__content">
               <div class="popup-feedback">
-                <div class="popup-feedback__label"><img src="assets/img/error.svg" alt="error"></div>
                 <p class="popup-feedback__title">Oops</p>
                 <p class="popup-feedback__subtitle">Something wrong. Try later.</p>
               </div>
@@ -128,24 +127,17 @@
           <div class="popup__wrapper"><button class="popup__close"><img class="desktop" src="assets/img/popup-close.svg"
                 alt="close"><img class="mobile" src="assets/img/popup-close-black.svg" alt="close"></button>
             <div class="popup__content">
-              <div class="action">
-                <p class="action__title">Отримати консультацію</p>
-                <div class="action__main">
-                  <form class="form action__form" id="form-popup" action="post">
-                    <div><label for="popup-name"> <strong>Ім’я</strong><input id="popup-name" type="text"
-                          name="name"><span class="wpcf7-not-valid-tip">Невірний формат</span></label><label
-                        for="popup-lastname"> <strong>Прізвище</strong><input id="popup-lastname" type="text"
-                          name="lastname"><span class="wpcf7-not-valid-tip">Невірний формат</span></label></div>
-                    <div><label for="popup-email"> <strong>Email</strong><input id="popup-email" type="email"
-                          name="email"><span class="wpcf7-not-valid-tip">Невірний формат</span></label><label
-                        for="popup-telephone"> <strong>Телефон</strong><input id="popup-telephone" type="tel"
-                          name="telephone"><span class="wpcf7-not-valid-tip">Невірний формат</span></label></div>
-                    <div><label for="popup-request"> <strong>Чим ми можемо допомогти</strong><textarea
-                          id="popup-request" name="request"></textarea><span class="wpcf7-not-valid-tip">Невірний
-                          формат</span></label></div>
-                    <p><button type="submit">Відправити</button><span>Натискаючи на кнопку "Відправити" ви погоджуєтесь
-                        з<a href="./document.html" target="_blank" rel="noreferrer">умовами
-                          конфіденційності</a><span>компанії Persona Patman</span></span></p>
+              <div class="popup-action">
+                <p class="popup-action__title">Заполните форму, <br />и мы <span>свяжемся с вами</span> в ближайшее
+                  время.</p>
+                <div class="popup-action__main">
+                  <form class="form popup-action__form" id="form-popup" action="post">
+                    <div><label for="popup-name"> <strong>Ваше имя:</strong><input id="popup-name" type="text"
+                          name="name"><span class="wpcf7-not-valid-tip">Неверний формат</span></label></div>
+                    <div><label for="popup-telephone"> <strong>Номер телефона:</strong><input id="popup-telephone"
+                          type="tel" name="telephone"><span class="wpcf7-not-valid-tip">Неверний формат</span></label>
+                    </div>
+                    <p><button type="submit">Отправить</button></p>
                   </form>
                 </div>
               </div>
@@ -166,7 +158,7 @@
                 <h1 class="banner__title"><span>Интеллектуальные</span><span class="outlined"><img
                       src="assets/img/banner-main-label.svg"
                       alt="label"><span>системы</span></span><span>видеонаблюдения</span></h1>
-                <p class="banner__subtitle">$20 OFF FOR NEW CUSTOMERS</p>
+                <p class="banner__subtitle">для компаний и частных лиц</p>
               </div>
             </div>
           </div>
@@ -219,6 +211,244 @@
               </div>
             </div>
           </div>
+        </div>
+      </div>
+    </section>
+    <section class="categories dark">
+      <div class="_container">
+        <div class="categories__wrapper">
+          <div class="categories-list"><a class="categories-list__item" href="#" target="_blank" rel="noreferrer">
+              <h3 class="categories-list__title">Бизнес-центры</h3><span class="categories-list__img"><span
+                  class="categories-list__img__container"><img src="assets/img/categories/category-1.jpg"
+                    alt="Бизнес-центры" loading="lazy"></span></span>
+            </a><a class="categories-list__item" href="#" target="_blank" rel="noreferrer">
+              <h3 class="categories-list__title">Логистические комплексы</h3><span class="categories-list__img"><span
+                  class="categories-list__img__container"><img src="assets/img/categories/category-2.jpg"
+                    alt="Логистические комплексы" loading="lazy"></span></span>
+            </a><a class="categories-list__item" href="#" target="_blank" rel="noreferrer">
+              <h3 class="categories-list__title">Автопредприятия</h3><span class="categories-list__img"><span
+                  class="categories-list__img__container"><img src="assets/img/categories/category-3.jpg"
+                    alt="Автопредприятия" loading="lazy"></span></span>
+            </a><a class="categories-list__item" href="#" target="_blank" rel="noreferrer">
+              <h3 class="categories-list__title">Торговые залы</h3><span class="categories-list__img"><span
+                  class="categories-list__img__container"><img src="assets/img/categories/category-4.jpg"
+                    alt="Торговые залы" loading="lazy"></span></span>
+            </a></div>
+        </div>
+      </div>
+    </section>
+    <section class="spheres grey">
+      <div class="_container">
+        <div class="spheres__wrapper">
+          <div class="spheres__header">
+            <h2 class="spheres__title">Что обеспечивает <span>интеллектуальное видеонаблюдение</span> в этой сфере</h2>
+            <p class="spheres__subtitle">Если неприятности все таки имели место,<br /> то записи видеонаблюдения - это
+              готовая доказательная база.</p>
+          </div>
+          <ul class="spheres-list label-list">
+            <li class="spheres-list__item label-list__item">
+              <div class="spheres-list__label label-list__label"><img src="assets/img/spheres/spheres-1.svg"
+                  alt="Предотвращение хищений"></div>
+              <p class="spheres-list__description">Предотвращение хищений</p>
+            </li>
+            <li class="spheres-list__item label-list__item">
+              <div class="spheres-list__label label-list__label"><img src="assets/img/spheres/spheres-2.svg"
+                  alt="Контроль доступа на территорию"></div>
+              <p class="spheres-list__description">Контроль доступа на территорию</p>
+            </li>
+            <li class="spheres-list__item label-list__item">
+              <div class="spheres-list__label label-list__label"><img src="assets/img/spheres/spheres-3.svg"
+                  alt="Контроль действий персонала"></div>
+              <p class="spheres-list__description">Контроль действий персонала</p>
+            </li>
+            <li class="spheres-list__item label-list__item">
+              <div class="spheres-list__label label-list__label"><img src="assets/img/spheres/spheres-4.svg"
+                  alt="Учет въезда/выезда автотранспорта"></div>
+              <p class="spheres-list__description">Учет въезда/выезда автотранспорта</p>
+            </li>
+            <li class="spheres-list__item label-list__item">
+              <div class="spheres-list__label label-list__label"><img src="assets/img/spheres/spheres-5.svg"
+                  alt="Упрощение анализа поведения клиентов"></div>
+              <p class="spheres-list__description">Упрощение анализа поведения клиентов</p>
+            </li>
+            <li class="spheres-list__item label-list__item">
+              <div class="spheres-list__label label-list__label"><img src="assets/img/spheres/spheres-6.svg"
+                  alt="Контроль техники на территории"></div>
+              <p class="spheres-list__description">Контроль техники на территории</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="services dark">
+      <div class="_container">
+        <div class="services__wrapper">
+          <div class="services__header">
+            <h2 class="services__title">Что мы предлагаем своим клиентам</h2>
+            <p class="services__subtitle">Передовые технологии в области искусственного интеллекта для распознавания
+              объектов на видео в режиме реального времени</p>
+          </div>
+          <ul class="services-list">
+            <li class="services-list__item">
+              <div class="services-list__content">
+                <div class="services-list__label"><img src="assets/img/services/services-label.svg"
+                    alt="Проектирование с нуля"></div>
+                <div class="services-list__text">
+                  <h3 class="services-list__title">Проектирование с нуля</h3>
+                  <p class="services-list__description">Проектируем системы интеллектуального видеонаблюдения различного
+                    назначения для частных лиц и компаний.</p>
+                </div>
+              </div>
+            </li>
+            <li class="services-list__item">
+              <div class="services-list__content">
+                <div class="services-list__label"><img src="assets/img/services/services-label.svg"
+                    alt="Интеграция систем"></div>
+                <div class="services-list__text">
+                  <h3 class="services-list__title">Интеграция систем</h3>
+                  <p class="services-list__description">Реализовываем интеграцию в существующие системы и процессы
+                    предприятия или частного дома (например в систему умный дом).</p>
+                </div>
+              </div>
+            </li>
+            <li class="services-list__item">
+              <div class="services-list__content">
+                <div class="services-list__label"><img src="assets/img/services/services-label.svg"
+                    alt="Масштабирование"></div>
+                <div class="services-list__text">
+                  <h3 class="services-list__title">Масштабирование</h3>
+                  <p class="services-list__description">Помогаем масштабировать существующие проектов по
+                    интеллектуальному видеонаблюдению с минимальными затратами.</p>
+                </div>
+              </div>
+            </li>
+            <li class="services-list__item empty">
+              <div class="services-list__img"><img src="assets/img/services/services-image.svg" alt="service"></div>
+            </li>
+            <li class="services-list__item">
+              <div class="services-list__content">
+                <div class="services-list__label"><img src="assets/img/services/services-label.svg"
+                    alt="Реализация под ключ"></div>
+                <div class="services-list__text">
+                  <h3 class="services-list__title">Реализация под ключ</h3>
+                  <p class="services-list__description">Проектируем, подбираем оборудование, осуществляем монтаж и
+                    настраиваем программное обеспечение.</p>
+                </div>
+              </div>
+            </li>
+            <li class="services-list__item">
+              <div class="services-list__content">
+                <div class="services-list__label"><img src="assets/img/services/services-label.svg"
+                    alt="Консультационные услуги"></div>
+                <div class="services-list__text">
+                  <h3 class="services-list__title">Консультационные услуги</h3>
+                  <p class="services-list__description">Предоставляем консультации по интеллектуальным системам
+                    видеонаблюдения по всем вопросам от А до Я.</p>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="benefits grey">
+      <div class="_container">
+        <div class="benefits__wrapper">
+          <div class="benefits__content">
+            <h2 class="benefits__title">Выгоды комплексного сотрудничества с ai video</h2>
+            <div class="benefits__media"><img src="assets/img/benefits/benefits-image.jpg" alt="benefits"
+                loading="lazy"></div>
+          </div>
+          <ul class="benefits-list label-list">
+            <li class="benefits-list__item label-list__item">
+              <div class="benefits-list__label label-list__label"><img src="assets/img/benefits/benefits-1.svg"
+                  alt="Вы получите индивидуальный проект"></div>
+              <div class="benefits-list__text label-list__text">
+                <h3 class="benefits-list__title label-list__title">Вы получите индивидуальный проект</h3>
+                <p class="benefits-list__description">Только индивидуальные проекты отвечают задачам и особенностям
+                  конкретного объекта</p>
+              </div>
+            </li>
+            <li class="benefits-list__item label-list__item">
+              <div class="benefits-list__label label-list__label"><img src="assets/img/benefits/benefits-2.svg"
+                  alt="Вашу систему установят штатные специалисты"></div>
+              <div class="benefits-list__text label-list__text">
+                <h3 class="benefits-list__title label-list__title">Вашу систему установят штатные специалисты</h3>
+                <p class="benefits-list__description">В реализации наших проектов не участвуют сторонние исполнители,
+                  что гарантирует качество</p>
+              </div>
+            </li>
+            <li class="benefits-list__item label-list__item">
+              <div class="benefits-list__label label-list__label"><img src="assets/img/benefits/benefits-3.svg"
+                  alt="Рассчитаем для вас честную смету"></div>
+              <div class="benefits-list__text label-list__text">
+                <h3 class="benefits-list__title label-list__title">Рассчитаем для вас честную смету</h3>
+                <p class="benefits-list__description">Подбираем необходимый и достаточный набор оборудования без лишних
+                  компонентов</p>
+              </div>
+            </li>
+            <li class="benefits-list__item label-list__item">
+              <div class="benefits-list__label label-list__label"><img src="assets/img/benefits/benefits-4.svg"
+                  alt="Вы не останетесь один на один с проблемой"></div>
+              <div class="benefits-list__text label-list__text">
+                <h3 class="benefits-list__title label-list__title">Вы не останетесь один на один с проблемой</h3>
+                <p class="benefits-list__description">Мы всегда готовы предложить сервисное обслуживание установленных
+                  нами систем</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section class="steps light">
+      <div class="_container">
+        <div class="steps__wrapper">
+          <div class="steps__header">
+            <h2 class="steps__title">Сделайте первый шаг к <span>идеальному видеонаблюдению</span></h2>
+            <p class="steps__subtitle">это абсолютно бесплатно</p>
+          </div>
+          <ul class="steps-list">
+            <li class="steps-list__item">
+              <div class="steps-list__header">
+                <h3 class="steps-list__title">Вы оставляете заявку удобным для вас способом</h3>
+                <div class="steps-list__count">01</div>
+              </div>
+              <ul class="steps-list-sublist">
+                <li class="steps-list-sublist__item">Воспользуйтесь формой прямо тут</li>
+                <li class="steps-list-sublist__item">Позвоните нам по телефону</li>
+                <li class="steps-list-sublist__item">Напишите нам в мессенджер</li>
+              </ul>
+            </li>
+            <li class="steps-list__item">
+              <div class="steps-list__header">
+                <h3 class="steps-list__title">Мы выезжаем на объект и даем бесплатную консультацию</h3>
+                <div class="steps-list__count">02</div>
+              </div>
+              <ul class="steps-list-sublist">
+                <li class="steps-list-sublist__item">Выясним особенности объекта </li>
+                <li class="steps-list-sublist__item">Обсудим задачи видеонаблюдения</li>
+                <li class="steps-list-sublist__item">Предложим варианты решений</li>
+              </ul>
+            </li>
+            <li class="steps-list__item">
+              <div class="steps-list__header">
+                <h3 class="steps-list__title">Мы выезжаем на объект и даем бесплатную консультацию</h3>
+                <div class="steps-list__count">03</div>
+              </div>
+              <ul class="steps-list-sublist">
+                <li class="steps-list-sublist__item">Консультационное сопровождение</li>
+                <li class="steps-list-sublist__item">Проектирование системы</li>
+                <li class="steps-list-sublist__item">Комплексная реализация проекта</li>
+              </ul>
+            </li>
+          </ul>
+          <div class="steps__footer"><button class="button-dark steps__button popup-open"
+              data-popup="_popup-form"><span>Оставить заявку</span><svg width="14" height="15" viewBox="0 0 14 15"
+                fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M4.11299 11.6247L4.93795 12.4497L9.8877 7.49996L4.93795 2.55021L4.11299 3.37517L8.23778 7.49996L4.11299 11.6247Z"
+                  fill="currentColor" />
+              </svg></button></div>
         </div>
       </div>
     </section>

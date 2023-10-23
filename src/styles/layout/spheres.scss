@@ -1,0 +1,127 @@
+.spheres {
+  
+  //.spheres__wrapper 
+  &__wrapper {
+    width: 100%;
+
+    > * + * {
+      @include viewport-tablet-min {
+        margin-top: px-to-rem(52);
+      }
+      @include viewport-phone {
+        margin-top: px-to-rem(36);
+      }
+    }
+  }
+  
+  //.spheres__header 
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    max-width: px-to-rem(930);
+    margin-left: auto;
+    margin-right: auto;
+
+    text-align: center;
+
+    > * + * {
+      margin-top: px-to-rem(24);
+    }
+  }
+  
+  //.spheres__title 
+  &__title {
+    @include text-heading-2;
+
+    span {
+      color: var(--color-blue);
+    }
+  }
+  
+  //.spheres__subtitle 
+  &__subtitle {
+    max-width: px-to-rem(580);
+    font-weight: 250;
+    font-size: px-to-rem(16);
+  }
+  
+  //.spheres-list 
+  &-list {
+    display: grid;
+
+    @include viewport-desktop {
+      grid-template-columns: repeat(3, 1fr);
+      gap: px-to-rem(68) px-to-rem(106);
+    }
+
+    @include viewport-tablet {
+      grid-template-columns: repeat(2, 1fr);
+      gap: px-to-rem(54) px-to-rem(80);
+    }
+
+    @include viewport-phone {
+      grid-template-columns: repeat(2, 1fr);
+      gap: px-to-rem(54) px-to-rem(32);
+
+      @media (max-width: 350px) {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    //.spheres-list__item 
+    &__item {
+      @include viewport-phone {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      > * + * {
+        @include viewport-phone {
+          margin-top: px-to-rem(24);
+        }
+      }
+    }
+    
+    //.spheres-list__label 
+    &__label {
+      @include viewport-desktop {
+        max-width: px-to-rem(108);
+        height: px-to-rem(108);
+      }
+      
+      @include viewport-tablet {
+        max-width: px-to-rem(80);
+        height: px-to-rem(80);
+      }
+      
+      @include viewport-phone {
+        max-width: px-to-rem(80);
+        height: px-to-rem(80);
+      }
+
+      img,
+      svg {
+        @include viewport-desktop {
+          max-width: px-to-rem(44);
+        }
+
+        @include viewport-tablet {
+          max-width: px-to-rem(32);
+        }
+
+        @include viewport-phone {
+          max-width: px-to-rem(32);
+        }
+      }
+    }
+    
+    //.spheres-list__description 
+    &__description {
+      font-weight: 400;
+      line-height: 130%;
+      font-size: px-to-rem(16);
+    }
+  }
+}

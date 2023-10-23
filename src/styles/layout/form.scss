@@ -42,7 +42,7 @@ textarea {
   font-family: $font-family;
   font-size: px-to-rem(16);
   line-height: 100%;
-  font-weight: 300;
+  font-weight: 250;
   color: var(--color-black);
   background-color: var(--color-white);
 
@@ -79,20 +79,6 @@ textarea {
   @at-root form.invalid textarea {
     border-color: var(--color-red);
   }
-  
-  @at-root form.banner__form input {
-    border: unset;
-    border-radius: 0;
-
-    font-size: px-to-rem(14);
-
-    @include viewport-tablet-min {
-      padding: px-to-rem(16) px-to-rem(18);
-    }
-    @include viewport-phone {
-      padding: px-to-rem(18) 0;
-    }
-  }
 }
 
 textarea {
@@ -128,88 +114,6 @@ form {
     opacity: 0;
   }
 
-  &.form.banner__form {
-    //background-color: var(--color-white);
-
-    label {
-      background-color: var(--color-white);
-
-      @include viewport-tablet-min {
-        padding: px-to-rem(10) 0;
-      }
-      @include viewport-phone {
-        padding: 0 px-to-rem(12)
-      }
-
-      @at-root form.invalid.banner__form label {
-        background-color: rgba(var(--color-red--rgb), 0.3);
-      }
-
-      .wpcf7-not-valid-tip {
-        @include viewport-tablet-min {
-          padding: 0 px-to-rem(18);
-        }
-        @include viewport-phone {
-          margin-top: px-to-rem(4);
-          margin-bottom: px-to-rem(12);
-        }
-      }
-    }
-    
-    > div {
-      gap: 0;
-
-      @include viewport-tablet-min {
-        grid-template-columns: 1fr 1fr px-to-rem(188);
-        background-color: var(--color-white);
-      }
-
-      @include viewport-phone {
-        background-color: var(--color-white);
-      }
-
-      > * + * {       
-        input {
-          @include viewport-tablet-min {
-            border-left: 1px solid rgba(var(--color-black--rgb), 0.4);
-            padding-left: px-to-rem(34);
-          }
-
-          @include viewport-phone {
-            border-top: 1px solid rgba(var(--color-black--rgb), 0.4);
-          }
-        }
-
-        .wpcf7-not-valid-tip {
-          @include viewport-tablet-min {
-            padding-left: px-to-rem(34);
-          }
-        }
-      }
-    }
-
-
-    button[type="submit"],
-    input[type="submit"] {
-      width: 100%;
-      border-radius: 0;
-
-      background-color: var(--color-black);
-      
-      @include hover-focus-visible {
-        @include non-mobile-device {
-          color: var(--color-blue);
-          background-color: var(--color-blue-100);
-        }
-      }
-
-      @include viewport-phone {
-        padding-top: px-to-rem(20);
-        padding-bottom: px-to-rem(20);
-      }
-    }
-  }
-
   label {
     display: block;
 
@@ -226,11 +130,11 @@ form {
 
     strong {
       display: block;
-      margin-bottom: px-to-rem(6);
+      margin-bottom: px-to-rem(10);
 
-      font-weight: 400;
-      line-height: 100%;
-      font-size: px-to-rem(16);
+      font-weight: 250;
+      line-height: 174%;
+      font-size: px-to-rem(12);
       color: var(--color-black);
 
       @at-root form.invalid strong {
@@ -283,16 +187,6 @@ form {
       gap: px-to-rem(24) px-to-rem(14);
     }
 
-    @at-root form.form.contacts__form {
-      > div {
-        gap: px-to-rem(30) px-to-rem(42);
-      }
-
-      + * {
-        margin-top: px-to-rem(30);
-      }
-    }
-
     > * {
       &:only-child {
         @include viewport-tablet-min {
@@ -302,13 +196,14 @@ form {
     }
 
     + * {
-      margin-top: px-to-rem(34);
+      margin-top: px-to-rem(26);
     }
   }
 
   button[type=submit],
   input[type=submit] {
-    @include button-light;
+    @include button-dark;
+    width: 100%;
 
     &.hidden {
       padding: 0;
@@ -316,7 +211,7 @@ form {
       font-size: 0; 
     }
 
-    @include transition((color 0.4s, background 0.4s, clip-path 0.6s));
+    @include transition((color 0.4s, background 0.4s));
     background-color: var(--color-reverse);
 
     &::before,
@@ -326,7 +221,7 @@ form {
 
     @include hover-focus-visible {
       @include non-mobile-device {
-        color: var(--color-theme);
+        background-color: var(--color-black);
       }
     }
   }

@@ -108,8 +108,7 @@
   
   //.banner__subtitle 
   &__subtitle {
-    text-transform: uppercase;
-    font-weight: 400;
+    font-weight: 250;
     line-height: 130%;
 
     @include viewport-tablet-min {

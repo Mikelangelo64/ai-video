@@ -44,11 +44,11 @@
         transform: translate(0, 0);
       }
 
-      svg {
-        path {
-          stroke: var(--color-reverse, var(--color-black));
-        }
-      }
+      // svg {
+      //   path {
+      //     stroke: var(--color-reverse, var(--color-black));
+      //   }
+      // }
     }
   }
 
@@ -97,10 +97,10 @@
     width: px-to-rem(14);
     height: px-to-rem(14);
 
-    path {
-      @include transition(stroke 0.4s);
-      stroke: var(--color-theme, var(--color-highlight));
-    }
+    // path {
+    //   @include transition(stroke 0.4s);
+    //   stroke: var(--color-theme, var(--color-highlight));
+    // }
   }
 
   > * + * {
@@ -112,6 +112,16 @@
   --color-theme: var(--color-blue-050);
   --color-reverse: var(--color-white);
   @include button;
+
+  // @include hover-focus-visible {
+  //   @include non-mobile-device {
+  //     color: var(--color-theme);
+  //   }
+  // }
+
+  &::before {
+    background-color: var(--color-black);
+  }
 }
 
 @mixin button-dark {
@@ -129,9 +139,13 @@
   //   border: 1px solid var(--color-theme);
   // }
 
-  // svg {
-  //   path {
-  //     stroke: var(--color-white);
-  //   }
-  // }
+  &::before {
+    background-color: var(--color-black);
+  }
+
+  @include hover-focus-visible {
+    @include non-mobile-device {
+      color: var(--color-theme);
+    }
+  }
 }

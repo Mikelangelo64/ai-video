@@ -36,4 +36,8 @@ section.categories.dark
 
             span.categories-list__img
               span.categories-list__img__container
-                img(src=require(`${item.image}`), alt=`${item.title}`)
+                img(
+                  src=require(`${item.image}`),
+                  alt=`${item.title}`,
+                  loading='lazy'
+                )

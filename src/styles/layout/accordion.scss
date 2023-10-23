@@ -48,7 +48,7 @@
 
     @include hover-focus-visible {
       @include non-mobile-device {
-        color: var(--color-red);
+        color: var(--color-blue);
       }
     } 
 

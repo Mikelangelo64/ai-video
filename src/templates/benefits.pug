@@ -1,0 +1,46 @@
+-
+  const benefitsList = [
+    {
+      image: '@/assets/img/benefits/benefits-1.svg',
+      title: 'Вы получите индивидуальный проект',
+      description: 'Только индивидуальные проекты отвечают задачам и особенностям конкретного объекта',
+    },
+    {
+      image: '@/assets/img/benefits/benefits-2.svg',
+      title: 'Вашу систему установят штатные специалисты',
+      description: 'В реализации наших проектов не участвуют сторонние исполнители, что гарантирует качество',
+    },
+    {
+      image: '@/assets/img/benefits/benefits-3.svg',
+      title: 'Рассчитаем для вас честную смету',
+      description: 'Подбираем необходимый и достаточный набор оборудования без лишних компонентов',
+    },
+    {
+      image: '@/assets/img/benefits/benefits-4.svg',
+      title: 'Вы не останетесь один на один с проблемой',
+      description: 'Мы всегда готовы предложить сервисное обслуживание установленных нами систем',
+    },
+  ];
+
+section.benefits.grey
+  ._container
+    .benefits__wrapper
+      .benefits__content
+        h2.benefits__title Выгоды комплексного сотрудничества с ai video
+
+        .benefits__media
+          img(
+            src=require('@/assets/img/benefits/benefits-image.jpg'),
+            alt='benefits',
+            loading='lazy'
+          )
+
+      ul.benefits-list.label-list
+        each item in benefitsList
+          li.benefits-list__item.label-list__item
+            .benefits-list__label.label-list__label
+              img(src=require(`${item.image}`), alt=`${item.title}`)
+
+            .benefits-list__text.label-list__text
+              h3.benefits-list__title.label-list__title= item.title
+              p.benefits-list__description= item.description

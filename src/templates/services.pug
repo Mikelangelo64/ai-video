@@ -1,0 +1,64 @@
+-
+  const servicesList = [
+    {
+      isEmpty: 'false',
+      title: 'Проектирование с нуля',
+      description: 'Проектируем системы интеллектуального видеонаблюдения различного назначения для частных лиц и компаний.',
+    },
+    {
+      isEmpty: 'false',
+      title: 'Интеграция систем',
+      description: 'Реализовываем интеграцию в существующие системы и процессы предприятия или частного дома (например в систему умный дом).',
+    },
+    {
+      isEmpty: 'false',
+      title: 'Масштабирование',
+      description: 'Помогаем масштабировать существующие проектов по интеллектуальному видеонаблюдению с минимальными затратами.',
+    },
+    {
+      isEmpty: 'true',
+      title: '',
+      description: '',
+    },
+    {
+      isEmpty: 'false',
+      title: 'Реализация под ключ',
+      description: 'Проектируем, подбираем оборудование, осуществляем монтаж и настраиваем программное обеспечение.',
+    },
+    {
+      isEmpty: 'false',
+      title: 'Консультационные услуги',
+      description: 'Предоставляем консультации по интеллектуальным системам видеонаблюдения по всем вопросам от А до Я.',
+    },
+  ];
+
+section.services.dark
+  ._container
+    .services__wrapper
+      .services__header
+        h2.services__title Что мы предлагаем своим клиентам
+
+        p.services__subtitle Передовые технологии в области искусственного интеллекта для распознавания объектов на видео в режиме реального времени
+
+      ul.services-list
+        each item in servicesList
+          if item.isEmpty === 'false'
+            li.services-list__item
+              .services-list__content
+                .services-list__label
+                  img(
+                    src=require('@/assets/img/services/services-label.svg'),
+                    alt=`${item.title}`
+                  )
+
+                .services-list__text
+                  h3.services-list__title= item.title
+                  p.services-list__description= item.description
+
+          else
+            li.services-list__item.empty
+              .services-list__img
+                img(
+                  src=require('@/assets/img/services/services-image.svg'),
+                  alt='service'
+                )

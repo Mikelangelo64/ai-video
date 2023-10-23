@@ -1,0 +1,18 @@
+.popup-action {
+  > * + * {
+    margin-top: px-to-rem(48);
+  }
+
+  //.popup-action__title 
+  &__title {
+    @include text-heading-3;
+
+    @include viewport-desktop {
+      font-size: px-to-rem(26);
+    }
+
+    span {
+      color: var(--color-blue);
+    }
+  }
+}

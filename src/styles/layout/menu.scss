@@ -72,6 +72,10 @@
   &__button {
     font-family: $font-family-additional;
     //margin-top: px-to-rem(60);
+
+    &::before {
+      background-color: var(--color-blue);
+    }
   }
 }
 
@@ -99,14 +103,14 @@
     color: inherit;
     
     @at-root .menu.header__menu & {
-      @include transition(color 0.4s);
+      //@include transition(color 0.4s);
       font-size: px-to-rem(16);
 
-      @include hover-focus-visible {
-        @include non-mobile-device {
-          color: var(--color-blue);
-        }
-      }
+      // @include hover-focus-visible {
+      //   @include non-mobile-device {
+      //     color: var(--color-blue);
+      //   }
+      // }
     }
 
     &::before {
