@@ -70,9 +70,21 @@
     @include text-heading-1;
     text-transform: uppercase;
 
+    @include viewport-phone {
+      @media (max-width: 480px) {
+        font-size: px-to-rem(20);
+      }
+      
+      @media (max-width: 350px) {
+        font-size: px-to-rem(18);
+      }
+    }
+
     @at-root .banner.banner-inner & {
       @include viewport-phone {
-        font-size: px-to-rem(24);
+        @media (max-width: 480px) {
+          font-size: px-to-rem(24);
+        }
         
         @media (max-width: 350px) {
           font-size: px-to-rem(20);
@@ -101,6 +113,10 @@
         }
         @include viewport-phone {
           max-width: px-to-rem(32);
+          
+          @media (max-width: 480px) {
+            max-width: px-to-rem(24);
+          }
         }
       }
 
@@ -126,7 +142,7 @@
     }
 
     @include viewport-phone {
-      font-size: px-to-rem(20);
+      font-size: px-to-rem(14);
     }
 
     @at-root .banner.banner-inner & {
