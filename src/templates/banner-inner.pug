@@ -1,0 +1,25 @@
+section.banner.banner-inner.appear.special
+  .appear__wrapper
+    .appear-hidden
+      ._container.banner__container
+        .banner-bg
+          .banner-bg__img
+            img(src=require('@/assets/img/banner-bg-inner.jpg'), alt='banner')
+
+        .banner__wrapper
+          .banner__content
+            h1.banner__title
+              span видеонаблюдение
+              span.outlined
+                span с искусственным
+              span интеллектом
+
+            p.banner__subtitle!= '<span>для предприятий</span>'
+
+    .appear-shown(data-animate='translateShown')
+      .banner-media
+        button.banner__down
+          img(src=require('@/assets/img/arrow-down.svg'), alt='scroll-down')
+
+        .banner-media__container
+          img(src=require('@/assets/img/banner-media-inner.jpg'), alt='banner')

@@ -36,7 +36,10 @@
     
     @at-root .popup.popup-menu & {
       display: block;
-      background-color: var(--color-black);
+      
+      &::before {
+        background-color: var(--color-black);
+      }
     }
   }
   

@@ -1,0 +1,33 @@
+doctype html
+html(lang='en')
+  head
+    include @/layout/head.pug
+
+    title AI Video - inner
+
+    //- link(rel='stylesheet', href=require('@/styles/fonts.css'))
+    link(rel='stylesheet', href=require('@/styles/inner.scss'))
+
+  body
+    include @/layout/header.pug
+
+    include @/templates/banner-inner.pug
+
+    include @/templates/marquee.pug
+
+    include @/templates/categories.pug
+
+    include @/templates/spheres.pug
+
+    include @/templates/services.pug
+
+    include @/templates/seo-banner.pug
+
+    include @/templates/benefits.pug
+
+    include @/templates/steps.pug
+
+    include @/layout/footer.pug
+
+    //- script(src=require('@/scripts/video.ts')) 
+    script(src=require('../index.ts')) 
