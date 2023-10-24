@@ -32,7 +32,11 @@ section.types.dark
               rel='noreferrer'
             ) 
               span.types-list__img__container
-                img(src=require(`${item.image}`), alt=`${item.title}`)
+                img.types-list__img__content(
+                  src=require(`${item.image}`),
+                  alt=`${item.title}`,
+                  loading='lazy'
+                )
 
             .types-list__content
               h3.types-list__title= item.title

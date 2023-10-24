@@ -1,7 +1,9 @@
 import accordionInit from './accordion/init';
 import anchorsInit from './anchor/init';
+import { scrollBannerHandler } from './anchor/scroll';
 import appearInit from './appear/init';
 import marqueeInit from './marquee/init';
+import moveHoverImageInit from './moveHoverImage/init';
 import initPopups from './popup/init';
 import scrollBarInit from './scrollbar';
 import submenuToggle from './submenu/init';
@@ -11,8 +13,13 @@ export const init = () => {
   submenuToggle();
   marqueeInit();
   accordionInit();
+  scrollBannerHandler(0);
 
   appearInit();
+  moveHoverImageInit({
+    containerClass: 'types-list__img',
+    labelClass: 'types-list__img__content'
+  });
 
   // const header = document.querySelector('.header') as HTMLElement;
   // // const headerHeight = header ? header.offsetHeight : 0;
